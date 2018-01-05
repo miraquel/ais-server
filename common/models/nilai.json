@@ -1,0 +1,35 @@
+{
+  "name": "Nilai",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "jenis": {
+      "type": "string",
+      "required": true
+    },
+    "skor": {
+      "type": "number",
+      "required": true
+    },
+    "tanggal": {
+      "type": "date",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "mahasiswa": {
+      "type": "belongsTo",
+      "model": "Mahasiswa"
+    },
+    "mataKuliah": {
+      "type": "belongsTo",
+      "model": "MataKuliah"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

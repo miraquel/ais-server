@@ -1,0 +1,20 @@
+{
+  "mongodb": {
+    "host": "127.0.0.1",
+    "port": 27017,
+    "url": "",
+    "database": "ais",
+    "password": "",
+    "name": "mongodb",
+    "user": "",
+    "connector": "mongodb"
+  },
+  "myfile": {
+    "name": "myfile",
+    "connector": "loopback-component-storage",
+    "provider": "filesystem",
+    "root": "./storage",
+    "maxFileSize": "10485760",
+    "nameConflict": "makeUnique"
+  }
+}

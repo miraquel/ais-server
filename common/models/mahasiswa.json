@@ -1,0 +1,64 @@
+{
+  "name": "Mahasiswa",
+  "base": "User",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "nim": {
+      "type": "string",
+      "required": true
+    },
+    "nama": {
+      "type": "string",
+      "required": true
+    },
+    "tempat_lahir": {
+      "type": "string",
+      "required": true
+    },
+    "tanggal_lahir": {
+      "type": "date",
+      "required": true
+    },
+    "jenis_kelamin": {
+      "type": "string",
+      "required": true
+    },
+    "alamat": {
+      "type": "string",
+      "required": true
+    },
+    "no_handphone": {
+      "type": "string"
+    },
+    "no_telepon": {
+      "type": "string"
+    },
+    "profile_image_url": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "mataKuliahs": {
+      "type": "hasMany",
+      "model": "MataKuliah",
+      "through": "Nilai"
+    },
+    "accessTokens": {
+      "type": "hasMany",
+      "model": "MyAccessToken",
+      "polymorphic": {
+        "foreignKey": "userId",
+        "discriminator": "principalType"
+      },
+      "options": {
+        "disableInclude": true
+      }
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

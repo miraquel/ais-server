@@ -1,0 +1,35 @@
+{
+  "name": "MataKuliah",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "kode": {
+      "type": "string",
+      "required": true
+    },
+    "nama": {
+      "type": "string",
+      "required": true
+    },
+    "sks": {
+      "type": "number",
+      "required": true
+    },
+    "deskripsi": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "mahasiswas": {
+      "type": "hasMany",
+      "model": "Mahasiswa",
+      "through": "Nilai"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

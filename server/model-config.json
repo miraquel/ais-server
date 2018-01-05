@@ -1,0 +1,56 @@
+{
+  "_meta": {
+    "sources": [
+      "loopback/common/models",
+      "loopback/server/models",
+      "../common/models",
+      "./models"
+    ],
+    "mixins": [
+      "loopback/common/mixins",
+      "loopback/server/mixins",
+      "../common/mixins",
+      "./mixins"
+    ]
+  },
+  "MataKuliah": {
+    "dataSource": "mongodb",
+    "public": true
+  },
+  "Nilai": {
+    "dataSource": "mongodb",
+    "public": true
+  },
+  "Mahasiswa": {
+    "dataSource": "mongodb",
+    "public": true
+  },
+  "MyRole": {
+    "dataSource": "mongodb",
+    "public": false
+  },
+  "MyACL": {
+    "dataSource": "mongodb",
+    "public": false
+  },
+  "MyRoleMapping": {
+    "dataSource": "mongodb",
+    "public": false
+  },
+  "MyAccessToken": {
+    "dataSource": "mongodb",
+    "public": false
+  },
+  "Dosen": {
+    "dataSource": "mongodb",
+    "public": true
+  },
+  "Attachment": {
+    "dataSource": "myfile",
+    "public": true
+  },
+  "AttachmentMetadata": {
+    "dataSource": "mongodb",
+    "public": true
+  }
+}
